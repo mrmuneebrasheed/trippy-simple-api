@@ -1,7 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const app = express();
-const port = 3001;
+var port = process.env.PORT || 8000;
 const hotels = require("./hotels.json");
 app.use(express.urlencoded({ extended: "false" }));
 app.use(express.json());
