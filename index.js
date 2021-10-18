@@ -6,6 +6,9 @@ const hotels = require("./hotels.json");
 app.use(express.urlencoded({ extended: "false" }));
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.send("Welcome to trippy API");
+});
 app.get("/hotels", (req, res) => {
     res.json(hotels);
 });
